@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import AppRootScreen from './src/app-root-screen/AppRootScreen';
+import Toast from 'react-native-toast-message';
+import { getDataObject } from './helper/mystorage';
+import { AppProvider } from './Appcontext';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function App() {
+
+const App = () => { 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+ 
+      <AppProvider>
+      <AppRootScreen></AppRootScreen>
+      <Toast/>
+      </AppProvider>
+    
+      </>
   );
 }
 
+export default App;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 });

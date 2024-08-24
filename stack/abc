@@ -1,0 +1,20 @@
+{/* <Stack.Navigator
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title: "Home actor",
+              headerTitleStyle: styles.headerTitleStyle,
+            }}
+          />
+          <Stack.Screen
+            name="Detail"
+            component={Detail}
+            options={({route}) => {
+              return {
+                title: route.params.character.name,
+              }
+              }}
+            
+          />
+        </Stack.Navigator>> */}
